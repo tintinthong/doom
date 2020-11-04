@@ -1,8 +1,13 @@
+** Meta
+#+begin_src elisp
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets.
 (setq user-full-name "Justin Thong"
       user-mail-address "justinthong93@gmail.com")
+#+end_src
 
+** Font
+#+begin_src elisp
 ;; Doom exposes five (optional) variables for controlling fonts in Doom. Here
 ;; are the three important ones:
 ;;
@@ -16,16 +21,26 @@
 (setq doom-font (font-spec :family "Source Code Pro" :size 15 :weight 'semi-light)
       ;; doom-variable-pitch-font (font-spec :family "sans" :size 13)
       )
+#+end_src
 
+** Theme
+#+begin_src elisp
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
 (setq doom-theme 'doom-molokai)
+#+end_src
 
+** Org Mode
+#+begin_src elisp
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/org/")
+#+end_src
 
+** Vim
+#+begin_src elisp
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'
 (setq display-line-numbers-type 'relative)
+#+end_src
