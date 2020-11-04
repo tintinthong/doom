@@ -20,7 +20,8 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-molokai)
+;; (setq doom-theme 'doom-molokai)
+(setq doom-theme 'wombat)
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
@@ -29,3 +30,26 @@
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'
 (setq display-line-numbers-type 'relative)
+
+
+
+(add-hook 'js2-mode-hook 'prettier-js-mode)
+(setq prettier-js-args '(
+  "--trailing-comma" "all"
+  "--bracket-spacing" "false"
+))
+
+(map! :leader
+      :desc "Expand region" "v" #'er/expand-region
+      )
+
+;; (display-time-mode 1)
+(if (eq initial-window-system 'x)                 ; if started by emacs command or desktop file
+    (toggle-frame-maximized)
+  (toggle-frame-fullscreen))
+
+(global-set-key (kbd "<escape>") 'keyboard-escape-quit)
+
+(map! :leader
+      :desc "Expand region" "v" #'er/expand-region
+      )
