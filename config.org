@@ -47,10 +47,6 @@
 (setq display-line-numbers-type 'relative)
 #+end_src
 
-** Treemacs
-#+begin_src elisp
-#+end_src
-
 ** Prettier
 #+begin_src elisp
 (add-hook 'js2-mode-hook 'prettier-js-mode)
@@ -79,4 +75,13 @@
 (map! :leader
       :desc "Expand region" "v" #'er/expand-region
       )
+#+end_src
+
+** Haskell
+#+begin_src elisp
+;; (require 'lsp)
+;; (require 'lsp-haskell)
+;; ;; Hooks so haskell and literate haskell major modes trigger LSP setup
+;; (add-hook 'haskell-mode-hook #'lsp)
+;; (add-hook 'haskell-literate-mode-hook #'lsp)
 #+end_src

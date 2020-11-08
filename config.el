@@ -32,8 +32,6 @@
 ;; numbers are disabled. For relative line numbers, set this to `relative'
 (setq display-line-numbers-type 'relative)
 
-
-
 (add-hook 'js2-mode-hook 'prettier-js-mode)
 (setq prettier-js-args '(
   "--trailing-comma" "all"
@@ -54,3 +52,9 @@
 (map! :leader
       :desc "Expand region" "v" #'er/expand-region
       )
+
+;; (require 'lsp)
+;; (require 'lsp-haskell)
+;; ;; Hooks so haskell and literate haskell major modes trigger LSP setup
+;; (add-hook 'haskell-mode-hook #'lsp)
+;; (add-hook 'haskell-literate-mode-hook #'lsp)
