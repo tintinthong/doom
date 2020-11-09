@@ -32,11 +32,19 @@
 ;; numbers are disabled. For relative line numbers, set this to `relative'
 (setq display-line-numbers-type 'relative)
 
+(require 'prettier-js)
 (add-hook 'js2-mode-hook 'prettier-js-mode)
-(setq prettier-js-args '(
-  "--trailing-comma" "all"
-  "--bracket-spacing" "false"
-))
+;; eslint already used in +lsp
+;; (add-hook 'js2-mode-hook
+;;           (defun my-js2-mode-setup ()
+;;             (flycheck-mode t)
+;;             (when (executable-find "eslint")
+;;               (flycheck-select-checker 'javascript-eslint))))
+
+;; (setq prettier-js-args '(
+;;   "--trailing-comma" "all"
+;;   "--bracket-spacing" "false"
+;; ))
 
 (map! :leader
       :desc "Expand region" "v" #'er/expand-region

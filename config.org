@@ -47,13 +47,21 @@
 (setq display-line-numbers-type 'relative)
 #+end_src
 
-** Prettier
+** Javascript
 #+begin_src elisp
+(require 'prettier-js)
 (add-hook 'js2-mode-hook 'prettier-js-mode)
-(setq prettier-js-args '(
-  "--trailing-comma" "all"
-  "--bracket-spacing" "false"
-))
+;; eslint already used in +lsp
+;; (add-hook 'js2-mode-hook
+;;           (defun my-js2-mode-setup ()
+;;             (flycheck-mode t)
+;;             (when (executable-find "eslint")
+;;               (flycheck-select-checker 'javascript-eslint))))
+
+;; (setq prettier-js-args '(
+;;   "--trailing-comma" "all"
+;;   "--bracket-spacing" "false"
+;; ))
 #+end_src
 
 ** Selection
