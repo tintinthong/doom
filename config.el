@@ -49,10 +49,6 @@
 
 (global-set-key (kbd "<escape>") 'keyboard-escape-quit)
 
-(map! :leader
-      :desc "Expand region" "v" #'er/expand-region
-      )
-
 ;; (require 'lsp)
 ;; (require 'lsp-haskell)
 ;; ;; Hooks so haskell and literate haskell major modes trigger LSP setup

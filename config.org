@@ -72,9 +72,6 @@
 
 (global-set-key (kbd "<escape>") 'keyboard-escape-quit)
 
-(map! :leader
-      :desc "Expand region" "v" #'er/expand-region
-      )
 #+end_src
 
 ** Haskell
