@@ -40,6 +40,11 @@
 (setq org-directory "~/org/")
 #+end_src
 
+** Projectile Mode
+#+begin_src elisp
+(setq projectile-project-search-path '("~/Documents/GitHub/"))
+#+end_src
+
 ** Vim
 #+begin_src elisp
 ;; This determines the style of line numbers in effect. If set to `nil', line
@@ -51,17 +56,9 @@
 #+begin_src elisp
 (require 'prettier-js)
 (add-hook 'js2-mode-hook 'prettier-js-mode)
-;; eslint already used in +lsp
-;; (add-hook 'js2-mode-hook
-;;           (defun my-js2-mode-setup ()
-;;             (flycheck-mode t)
-;;             (when (executable-find "eslint")
-;;               (flycheck-select-checker 'javascript-eslint))))
-
-;; (setq prettier-js-args '(
-;;   "--trailing-comma" "all"
-;;   "--bracket-spacing" "false"
-;; ))
+(map! :leader
+      :desc "Prettify" "m f" #'prettier-js
+      )
 #+end_src
 
 ** Selection

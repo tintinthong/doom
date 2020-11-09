@@ -28,23 +28,17 @@
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/org/")
 
+(setq projectile-project-search-path '("~/Documents/GitHub/"))
+
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'
 (setq display-line-numbers-type 'relative)
 
 (require 'prettier-js)
 (add-hook 'js2-mode-hook 'prettier-js-mode)
-;; eslint already used in +lsp
-;; (add-hook 'js2-mode-hook
-;;           (defun my-js2-mode-setup ()
-;;             (flycheck-mode t)
-;;             (when (executable-find "eslint")
-;;               (flycheck-select-checker 'javascript-eslint))))
-
-;; (setq prettier-js-args '(
-;;   "--trailing-comma" "all"
-;;   "--bracket-spacing" "false"
-;; ))
+(map! :leader
+      :desc "Prettify" "m f" #'prettier-js
+      )
 
 (map! :leader
       :desc "Expand region" "v" #'er/expand-region
