@@ -32,6 +32,17 @@
 
 (setq projectile-project-search-path '("~/Documents/GitHub/"))
 
+(use-package dired
+  :ensure nil
+  :commands (dired dired-jump)
+  :bind (("C-x C-j" . dired-jump))
+  :config
+  (evil-collection-define-key 'normal 'dired-mode-map
+   "H" 'dired-up-directory
+   "L" 'dired-find-file
+   )
+  )
+
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'
 (setq display-line-numbers-type 'relative)
@@ -53,8 +64,41 @@
 
 (global-set-key (kbd "<escape>") 'keyboard-escape-quit)
 
-;; (require 'lsp)
-;; (require 'lsp-haskell)
+(require 'lsp)
+(require 'lsp-haskell)
 ;; ;; Hooks so haskell and literate haskell major modes trigger LSP setup
-;; (add-hook 'haskell-mode-hook #'lsp)
-;; (add-hook 'haskell-literate-mode-hook #'lsp)
+(add-hook 'haskell-mode-hook #'lsp)
+(add-hook 'haskell-literate-mode-hook #'lsp)
+(custom-set-variables
+ '(haskell-stylish-on-save t))
+(map! :leader
+      (:after lsp-mode
+       (:prefix ("l" . "LSP")
+          :desc "Restart LSP server" "r" #'lsp-workspace-restart
+          :desc "Excute code action" "a" #'lsp-execute-code-action
+          :desc "Go to definition" "d" #'lsp-find-definition
+          :desc "Toggle doc mode" "d" #'lsp-ui-doc-mode
+          (:prefix ("u" . "LSP UI")
+            :desc "Toggle doc mode" "d" #'lsp-ui-doc-mode
+            :desc "Toggle sideline mode"  "s" #'lsp-ui-sideline-mode
+            :desc "Glance at doc" "g" #'lsp-ui-doc-glance
+            :desc "Toggle imenu"  "i" #'lsp-ui-imenu
+            )
+          )))
+
+;; (after! lsp-ui
+;;   (setq lsp-ui-doc-enable t
+;;         lsp-ui-doc-glance 1
+;;         lsp-ui-doc-delay 0.5
+;;         lsp-ui-doc-include-signature t
+;;         lsp-ui-doc-position 'Top
+;;         lsp-ui-doc-border "#fdf5b1"
+;;         lsp-ui-doc-max-width 65
+;;         lsp-ui-doc-max-height 70
+;;         lsp-ui-sideline-enable t
+;;         lsp-ui-sideline-ignore-duplicate t
+;;         lsp-ui-peek-enable t
+;;         lsp-ui-flycheck-enable -1)
+
+;;   (add-to-list 'lsp-ui-doc-frame-parameters '(left-fringe . 0))
+;; )
