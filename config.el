@@ -58,9 +58,9 @@
       )
 
 ;; (display-time-mode 1)
-(if (eq initial-window-system 'x)                 ; if started by emacs command or desktop file
-    (toggle-frame-maximized)
-  (toggle-frame-fullscreen))
+;; (if (eq initial-window-system 'x)                 ; if started by emacs command or desktop file
+;;     (toggle-frame-maximized)
+;;   (toggle-frame-fullscreen))
 
 (global-set-key (kbd "<escape>") 'keyboard-escape-quit)
 

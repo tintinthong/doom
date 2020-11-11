@@ -12,9 +12,7 @@
  '(jdee-db-requested-breakpoint-face-colors (cons "#1B2229" "#b6e63e"))
  '(jdee-db-spec-breakpoint-face-colors (cons "#1B2229" "#525254"))
  '(objed-cursor-color "#e74c3c")
- '(package-selected-packages
-   (quote
-    (lsp-haskell org-roam vue-mode command-log-mode prettier-js)))
+ '(package-selected-packages (quote (vue-mode command-log-mode prettier-js)))
  '(pdf-view-midnight-colors (cons "#d6d6d4" "#1c1e1f"))
  '(rustic-ansi-faces
    ["#1c1e1f" "#e74c3c" "#b6e63e" "#e2c770" "#268bd2" "#fb2874" "#66d9ef" "#d6d6d4"])
