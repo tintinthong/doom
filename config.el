@@ -33,7 +33,6 @@
 (setq projectile-project-search-path '("~/Documents/GitHub/"))
 
 (use-package dired
-  :ensure nil
   :commands (dired dired-jump)
   :bind (("C-x C-j" . dired-jump))
   :config
