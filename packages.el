@@ -49,6 +49,6 @@
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;(unpin! t)
 (package! prettier-js)
-(package! command-log-mode)
+(package! yaml-mode)
 ;; (package! org-journal)
 ;; (package! org-roam)

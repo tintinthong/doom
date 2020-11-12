@@ -102,8 +102,8 @@
 ;; ;; Hooks so haskell and literate haskell major modes trigger LSP setup
 (add-hook 'haskell-mode-hook #'lsp)
 (add-hook 'haskell-literate-mode-hook #'lsp)
-(custom-set-variables
- '(haskell-stylish-on-save t))
+ ;; (custom-set-variables
+;;  '(haskell-stylish-on-save t))
 (map! :leader
       (:after lsp-mode
        (:prefix ("l" . "LSP")
@@ -123,20 +123,21 @@
 ** LSP
 
 #+begin_src elisp
-;; (after! lsp-ui
-;;   (setq lsp-ui-doc-enable t
+(after! lsp-ui
+  (setq lsp-ui-doc-enable t
 ;;         lsp-ui-doc-glance 1
 ;;         lsp-ui-doc-delay 0.5
 ;;         lsp-ui-doc-include-signature t
-;;         lsp-ui-doc-position 'Top
+;;         lsp-ui-doc-position 'at-point
 ;;         lsp-ui-doc-border "#fdf5b1"
 ;;         lsp-ui-doc-max-width 65
 ;;         lsp-ui-doc-max-height 70
 ;;         lsp-ui-sideline-enable t
 ;;         lsp-ui-sideline-ignore-duplicate t
 ;;         lsp-ui-peek-enable t
-;;         lsp-ui-flycheck-enable -1)
+;;         lsp-ui-flycheck-enable -1
+        )
 
 ;;   (add-to-list 'lsp-ui-doc-frame-parameters '(left-fringe . 0))
-;; )
+)
 #+end_src

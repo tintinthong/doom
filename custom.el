@@ -11,6 +11,8 @@
  '(jdee-db-active-breakpoint-face-colors (cons "#1B2229" "#fd971f"))
  '(jdee-db-requested-breakpoint-face-colors (cons "#1B2229" "#b6e63e"))
  '(jdee-db-spec-breakpoint-face-colors (cons "#1B2229" "#525254"))
+ '(lsp-haskell-formatting-provider "brittany")
+ '(lsp-haskell-hlint-on t)
  '(objed-cursor-color "#e74c3c")
  '(package-selected-packages (quote (vue-mode command-log-mode prettier-js)))
  '(pdf-view-midnight-colors (cons "#d6d6d4" "#1c1e1f"))
@@ -45,3 +47,4 @@
  ;; If there is more than one, they won't work right.
  '(hl-line ((t (:foreground nil))))
  '(solaire-hl-line-face ((t (:foreground nil)))))
+(put 'customize-group 'disabled nil)
