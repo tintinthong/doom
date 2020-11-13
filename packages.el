@@ -50,5 +50,6 @@
 ;(unpin! t)
 (package! prettier-js)
 (package! yaml-mode)
+(package! vue-mode)
 ;; (package! org-journal)
 ;; (package! org-roam)
