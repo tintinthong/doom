@@ -49,7 +49,7 @@
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;(unpin! t)
 (package! prettier-js)
-(package! yaml-mode)
 (package! vue-mode)
+(package! graphql-mode)
 ;; (package! org-journal)
 ;; (package! org-roam)
