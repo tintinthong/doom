@@ -85,20 +85,17 @@
             )
           )))
 
-(after! lsp-ui
+(after! lsp-ui-mode
   (setq lsp-ui-doc-enable t
-;;         lsp-ui-doc-glance 1
-;;         lsp-ui-doc-delay 0.5
-;;         lsp-ui-doc-include-signature t
-;;         lsp-ui-doc-position 'at-point
-;;         lsp-ui-doc-border "#fdf5b1"
-;;         lsp-ui-doc-max-width 65
-;;         lsp-ui-doc-max-height 70
-;;         lsp-ui-sideline-enable t
-;;         lsp-ui-sideline-ignore-duplicate t
-;;         lsp-ui-peek-enable t
-;;         lsp-ui-flycheck-enable -1
-        )
-
-;;   (add-to-list 'lsp-ui-doc-frame-parameters '(left-fringe . 0))
+        lsp-ui-doc-delay 0.5
+        lsp-ui-doc-include-signature t
+        lsp-ui-doc-position 'at-point
+        lsp-ui-doc-border "#fdf5b1"
+        lsp-ui-doc-max-width 65
+        lsp-ui-doc-max-height 70
+        lsp-ui-sideline-enable t
+        lsp-ui-sideline-ignore-duplicate t
+        lsp-ui-peek-enable t
+  )
+  (add-to-list 'lsp-ui-doc-frame-parameters '(left-fringe . 0))
 )
