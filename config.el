@@ -65,11 +65,9 @@
 
 (require 'lsp)
 (require 'lsp-haskell)
-;; ;; Hooks so haskell and literate haskell major modes trigger LSP setup
 (add-hook 'haskell-mode-hook #'lsp)
 (add-hook 'haskell-literate-mode-hook #'lsp)
- ;; (custom-set-variables
-;;  '(haskell-stylish-on-save t))
+(setq haskell-stylish-on-save nil)
 (map! :leader
       (:after lsp-mode
        (:prefix ("l" . "LSP")
