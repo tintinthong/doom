@@ -51,5 +51,6 @@
 (package! prettier-js)
 (package! vue-mode)
 (package! graphql-mode)
+(package! org-tree-slide)
 ;; (package! org-journal)
 ;; (package! org-roam)
