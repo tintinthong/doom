@@ -52,5 +52,6 @@
 (package! vue-mode)
 (package! graphql-mode)
 (package! org-tree-slide)
+(package! command-log-mode)
 ;; (package! org-journal)
 ;; (package! org-roam)

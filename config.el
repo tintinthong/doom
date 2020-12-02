@@ -26,9 +26,8 @@
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
-(setq org-directory "~/org/")
-(setq org-journal-dir "~/org/journal/")
-(setq org-roam-directory "~/org/roam/")
+(setq org-directory "~/Documents/GitHub/org/")
+(setq org-roam-directory "~/Documents/GitHub/org/roam/")
 
 (setq projectile-project-search-path '("~/Documents/GitHub/"))
 
@@ -97,3 +96,12 @@
   )
   (add-to-list 'lsp-ui-doc-frame-parameters '(left-fringe . 0))
 )
+
+(use-package command-log-mode
+  :config
+  (global-command-log-mode)
+  )
+
+(setq whitespace-mode 't)
+
+(require 'org-tree-slide)

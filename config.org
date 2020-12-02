@@ -37,9 +37,8 @@
 #+begin_src elisp
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
-(setq org-directory "~/org/")
-(setq org-journal-dir "~/org/journal/")
-(setq org-roam-directory "~/org/roam/")
+(setq org-directory "~/Documents/GitHub/org/")
+(setq org-roam-directory "~/Documents/GitHub/org/roam/")
 #+end_src
 
 ** Projectile Mode
@@ -138,3 +137,23 @@
 #+end_src
 
 ** Presentation
+
+#+begin_src elips
+(require 'org-tree-slide)
+#+end_src
+
+** Command Log Mode
+- use-package stops and loads everything
+
+#+begin_src elisp
+(use-package command-log-mode
+  :config
+  (global-command-log-mode)
+  )
+#+end_src
+
+** Indentation Formatting
+
+#+begin_src elisp
+(setq whitespace-mode 't)
+#+end_src
