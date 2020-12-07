@@ -146,3 +146,15 @@
         org-roam-server-network-label-truncate t
         org-roam-server-network-label-truncate-length 60
         org-roam-server-network-label-wrap-length 20))
+
+(map! :leader
+      :desc "test random prefix"
+      "a j j" #'org-tree-slide-skip-comments-toggle)
+
+(map! :leader
+      (:prefix-map ("t" . "toggle")
+       (:prefix ("s" . "tree-slide")
+        :desc "Skip comments in slide" "c" #'org-tree-slide-skip-comments-toggle
+        )
+       )
+      )

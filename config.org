@@ -205,3 +205,19 @@ Make sure you follow instruction [[github:org-roam/org-roam-server][org-roam-ser
         org-roam-server-network-label-truncate-length 60
         org-roam-server-network-label-wrap-length 20))
 #+end_src
+
+** Lessons in Keybindings
+
+#+begin_src elisp
+(map! :leader
+      :desc "test random prefix"
+      "a j j" #'org-tree-slide-skip-comments-toggle)
+
+(map! :leader
+      (:prefix-map ("t" . "toggle")
+       (:prefix ("s" . "tree-slide")
+        :desc "Skip comments in slide" "c" #'org-tree-slide-skip-comments-toggle
+        )
+       )
+      )
+#+end_src
