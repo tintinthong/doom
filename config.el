@@ -55,7 +55,7 @@
       :desc "Expand region" "v" #'er/expand-region
       )
 
-;; (display-time-mode 1)
+(display-time-mode 1)
 ;; (if (eq initial-window-system 'x)                 ; if started by emacs command or desktop file
 ;;     (toggle-frame-maximized)
 ;;   (toggle-frame-fullscreen))
