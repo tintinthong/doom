@@ -4,8 +4,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
-   (quote
-    ("be9645aaa8c11f76a10bcf36aaf83f54f4587ced1b9b679b55639c87404e2499" default)))
+   '("5036346b7b232c57f76e8fb72a9c0558174f87760113546d3a9838130f1cdb74" "be9645aaa8c11f76a10bcf36aaf83f54f4587ced1b9b679b55639c87404e2499" default))
  '(fci-rule-color "#555556")
  '(haskell-stylish-on-save t)
  '(jdee-db-active-breakpoint-face-colors (cons "#1B2229" "#fd971f"))
@@ -14,7 +13,7 @@
  '(lsp-haskell-formatting-provider "brittany")
  '(lsp-haskell-hlint-on t)
  '(objed-cursor-color "#e74c3c")
- '(package-selected-packages (quote (vue-mode command-log-mode prettier-js)))
+ '(package-selected-packages '(vue-mode command-log-mode prettier-js))
  '(pdf-view-midnight-colors (cons "#d6d6d4" "#1c1e1f"))
  '(rustic-ansi-faces
    ["#1c1e1f" "#e74c3c" "#b6e63e" "#e2c770" "#268bd2" "#fb2874" "#66d9ef" "#d6d6d4"])

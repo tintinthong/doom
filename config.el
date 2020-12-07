@@ -22,12 +22,12 @@
 ;; `load-theme' function. This is the default:
 (setq doom-theme 'wombat)
 ;; Remove default hover highlight that removes ability to see syntax highlighting
-(custom-set-faces! '((hl-line solaire-hl-line-face) :foreground nil))
+;; (custom-set-faces! '((hl-line solaire-hl-line-face) :foreground nil))
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
-(setq org-directory "~/Documents/GitHub/org/")
-(setq org-roam-directory "~/Documents/GitHub/org/roam/")
+(setq org-directory "~/org/")
+(setq org-roam-directory "~/org/roam/")
 
 (setq projectile-project-search-path '("~/Documents/GitHub/"))
 
@@ -97,6 +97,29 @@
   (add-to-list 'lsp-ui-doc-frame-parameters '(left-fringe . 0))
 )
 
+(defun efs/presentation-setup ()
+  (hide-mode-line-mode 1)
+  (org-display-inline-images)
+  (setq text-scale-mode-amount 3)
+  (text-scale-mode 1)
+  )
+(defun efs/presentation-end ()
+  (hide-mode-line-mode 0)
+  (text-scale-mode 0)
+  )
+(use-package org-tree-slide
+  :hook (
+         (org-tree-slide-play . efs/presentation-setup)
+         (org-tree-slide-stop . efs/presentation-end)
+         )
+  :custom
+  (org-tree-slide-slide-in-effect t)
+  (org-tree-slide-activate-message t)
+  (org-tree-slide-deactivate-message t)
+  (org-tree-slide-header t)
+  (org-tree-slide-skip-comments 'nil)
+)
+
 (use-package command-log-mode
   :config
   (global-command-log-mode)
@@ -104,4 +127,22 @@
 
 (setq whitespace-mode 't)
 
-(require 'org-tree-slide)
+;; Interactive Org Roam Server Graph
+;; (require 'simple-httpd)
+;; (setq httpd-root "/var/www")
+;; (httpd-start)
+(require 'org-roam-protocol)
+(use-package org-roam-server
+  :ensure t
+  :config
+  (setq org-roam-server-host "127.0.0.1"
+        org-roam-server-port 8080
+        org-roam-server-authenticate nil
+        org-roam-server-export-inline-images t
+        org-roam-server-serve-files nil
+        org-roam-server-served-file-extensions '("pdf" "mp4" "ogv")
+        org-roam-server-network-poll t
+        org-roam-server-network-arrows nil
+        org-roam-server-network-label-truncate t
+        org-roam-server-network-label-truncate-length 60
+        org-roam-server-network-label-wrap-length 20))
