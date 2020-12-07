@@ -47,6 +47,7 @@
 #+end_src
 
 ** Dired
+This keybinding is already taken by`SPC o -`
 #+begin_src elisp
 (use-package dired
   :commands (dired dired-jump)
@@ -67,6 +68,7 @@
 #+end_src
 
 ** Javascript
+I don't think require is needed because packages.el loads the packages already
 #+begin_src elisp
 (require 'prettier-js)
 (add-hook 'js2-mode-hook 'prettier-js-mode)
@@ -76,6 +78,7 @@
 #+end_src
 
 ** Selection
+This helps me expand and contract selection
 #+begin_src elisp
 (map! :leader
       :desc "Expand region" "v" #'er/expand-region
@@ -95,6 +98,7 @@
 #+end_src
 
 ** Haskell
+Again require might not be needed.`lsp-haskell` comes with the original init tag. Note: sometimes have to restart the server. hie file is not needed.
 #+begin_src elisp
 (require 'lsp)
 (require 'lsp-haskell)
@@ -118,7 +122,7 @@
 #+end_src
 
 ** LSP
-
+These are generic settings for all languages but given you only use haskell.
 #+begin_src elisp
 (after! lsp-ui-mode
   (setq lsp-ui-doc-enable t
@@ -137,7 +141,7 @@
 #+end_src
 
 ** Presentation
-
+I still don't know how to start presentation at a particular place.
 #+begin_src elisp
 (defun efs/presentation-setup ()
   (hide-mode-line-mode 1)
@@ -164,8 +168,7 @@
 #+end_src
 
 ** Command Log Mode
-- use-package stops and loads everything
-
+use-package is a reliable way to load packages with certain configs.
 #+begin_src elisp
 (use-package command-log-mode
   :config
@@ -180,6 +183,7 @@
 #+end_src
 
 ** Org roam
+Make sure you follow instruction [[github:org-roam/org-roam-server][org-roam-server]]
 #+begin_src elisp
 ;; Interactive Org Roam Server Graph
 ;; (require 'simple-httpd)
