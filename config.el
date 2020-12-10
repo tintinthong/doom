@@ -124,6 +124,7 @@
   :config
   (global-command-log-mode)
   )
+(setq command-log-mode-window-font-size 5)
 
 (setq whitespace-mode 't)
 

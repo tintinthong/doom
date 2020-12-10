@@ -3,8 +3,11 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(ansi-color-names-vector
+   ["#252526" "#D16969" "#579C4C" "#D7BA7D" "#339CDB" "#C586C0" "#85DDFF" "#d4d4d4"])
  '(custom-safe-themes
-   '("5036346b7b232c57f76e8fb72a9c0558174f87760113546d3a9838130f1cdb74" "be9645aaa8c11f76a10bcf36aaf83f54f4587ced1b9b679b55639c87404e2499" default))
+   (quote
+    ("5d09b4ad5649fea40249dd937eaaa8f8a229db1cec9a1a0ef0de3ccf63523014" "76bfa9318742342233d8b0b42e824130b3a50dcc732866ff8e47366aed69de11" "5036346b7b232c57f76e8fb72a9c0558174f87760113546d3a9838130f1cdb74" "be9645aaa8c11f76a10bcf36aaf83f54f4587ced1b9b679b55639c87404e2499" default)))
  '(fci-rule-color "#555556")
  '(haskell-stylish-on-save t)
  '(jdee-db-active-breakpoint-face-colors (cons "#1B2229" "#fd971f"))
@@ -13,7 +16,7 @@
  '(lsp-haskell-formatting-provider "brittany")
  '(lsp-haskell-hlint-on t)
  '(objed-cursor-color "#e74c3c")
- '(package-selected-packages '(vue-mode command-log-mode prettier-js))
+ '(package-selected-packages (quote (vue-mode command-log-mode prettier-js)))
  '(pdf-view-midnight-colors (cons "#d6d6d4" "#1c1e1f"))
  '(rustic-ansi-faces
    ["#1c1e1f" "#e74c3c" "#b6e63e" "#e2c770" "#268bd2" "#fb2874" "#66d9ef" "#d6d6d4"])
