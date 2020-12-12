@@ -56,3 +56,4 @@
 (package! twittering-mode)
 (package! spotify)
 (package! org-roam-server)
+(package! typing)
