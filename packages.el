@@ -57,3 +57,4 @@
 (package! spotify)
 (package! org-roam-server)
 (package! typing)
+(package! modus-vivendi-theme)

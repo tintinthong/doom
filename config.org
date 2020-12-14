@@ -28,7 +28,7 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'wombat)
+(setq doom-theme 'modus-vivendi)
 ;; Remove default hover highlight that removes ability to see syntax highlighting
 ;; (custom-set-faces! '((hl-line solaire-hl-line-face) :foreground nil))
 #+end_src
@@ -100,10 +100,10 @@ This helps me expand and contract selection
 ** Haskell
 Again require might not be needed.`lsp-haskell` comes with the original init tag. Note: sometimes have to restart the server. hie file is not needed.
 #+begin_src elisp
-(require 'lsp)
-(require 'lsp-haskell)
-(add-hook 'haskell-mode-hook #'lsp)
-(add-hook 'haskell-literate-mode-hook #'lsp)
+;; (require 'lsp)
+;; (require 'lsp-haskell)
+;; (add-hook 'haskell-mode-hook #'lsp)
+;; (add-hook 'haskell-literate-mode-hook #'lsp)
 (setq haskell-stylish-on-save nil)
 (map! :leader
       (:after lsp-mode
@@ -124,8 +124,9 @@ Again require might not be needed.`lsp-haskell` comes with the original init tag
 ** LSP
 These are generic settings for all languages but given you only use haskell.
 #+begin_src elisp
-(after! lsp-ui-mode
+(after! lsp-ui
   (setq lsp-ui-doc-enable t
+        lsp-ui-doc-glance 1
         lsp-ui-doc-delay 0.5
         lsp-ui-doc-include-signature t
         lsp-ui-doc-position 'at-point
@@ -135,7 +136,8 @@ These are generic settings for all languages but given you only use haskell.
         lsp-ui-sideline-enable t
         lsp-ui-sideline-ignore-duplicate t
         lsp-ui-peek-enable t
-  )
+        lsp-ui-flycheck-enable -1)
+
   (add-to-list 'lsp-ui-doc-frame-parameters '(left-fringe . 0))
 )
 #+end_src

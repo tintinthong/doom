@@ -20,7 +20,7 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'wombat)
+(setq doom-theme 'modus-vivendi)
 ;; Remove default hover highlight that removes ability to see syntax highlighting
 ;; (custom-set-faces! '((hl-line solaire-hl-line-face) :foreground nil))
 
@@ -62,10 +62,10 @@
 
 (global-set-key (kbd "<escape>") 'keyboard-escape-quit)
 
-(require 'lsp)
-(require 'lsp-haskell)
-(add-hook 'haskell-mode-hook #'lsp)
-(add-hook 'haskell-literate-mode-hook #'lsp)
+;; (require 'lsp)
+;; (require 'lsp-haskell)
+;; (add-hook 'haskell-mode-hook #'lsp)
+;; (add-hook 'haskell-literate-mode-hook #'lsp)
 (setq haskell-stylish-on-save nil)
 (map! :leader
       (:after lsp-mode
@@ -82,8 +82,9 @@
             )
           )))
 
-(after! lsp-ui-mode
+(after! lsp-ui
   (setq lsp-ui-doc-enable t
+        lsp-ui-doc-glance 1
         lsp-ui-doc-delay 0.5
         lsp-ui-doc-include-signature t
         lsp-ui-doc-position 'at-point
@@ -93,7 +94,8 @@
         lsp-ui-sideline-enable t
         lsp-ui-sideline-ignore-duplicate t
         lsp-ui-peek-enable t
-  )
+        lsp-ui-flycheck-enable -1)
+
   (add-to-list 'lsp-ui-doc-frame-parameters '(left-fringe . 0))
 )
 
