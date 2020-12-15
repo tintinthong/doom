@@ -224,3 +224,7 @@ Make sure you follow instruction [[github:org-roam/org-roam-server][org-roam-ser
        )
       )
 #+end_src
+
+** Tiny
+
+This helps us build linear ranges

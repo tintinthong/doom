@@ -58,3 +58,4 @@
 (package! org-roam-server)
 (package! typing)
 (package! modus-vivendi-theme)
+(package! tiny)
