@@ -228,3 +228,9 @@ Make sure you follow instruction [[github:org-roam/org-roam-server][org-roam-ser
 ** Tiny
 
 This helps us build linear ranges
+
+** Key chording for normal mode
+#+begin_src elisp
+(key-chord-mode 1)
+(key-chord-define-global "jk" 'evil-normal-state)
+#+end_src

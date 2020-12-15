@@ -59,3 +59,4 @@
 (package! typing)
 (package! modus-vivendi-theme)
 (package! tiny)
+(package! key-chord)
