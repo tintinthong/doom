@@ -230,7 +230,41 @@ Make sure you follow instruction [[github:org-roam/org-roam-server][org-roam-ser
 This helps us build linear ranges
 
 ** Key chording for normal mode
+Just trying it out ppl say its good
 #+begin_src elisp
 (key-chord-mode 1)
 (key-chord-define-global "jk" 'evil-normal-state)
+#+end_src
+
+** Electric Pairing for parentheses
+Fix this later
+;; #+begin_src elisp
+ ;; (defun electric-pair ()
+;;     "If at end of line, insert character pair without surrounding spaces.
+;; Otherwise, just insert the typed character."
+;;     (interactive)
+;;     (if (eolp) (let (parens-require-spaces) (insert-pair)) (self-insert-command 1)))
+;; (add-hook 'python-mode-hook
+;;             (lambda ()
+;;             (define-key python-mode-map "\"" 'electric-pair)
+;;             (define-key python-mode-map "\'" 'electric-pair)
+;;             (define-key python-mode-map "(" 'electric-pair)
+;;             (define-key python-mode-map "[" 'electric-pair)
+;;             (define-key python-mode-map "{" 'electric-pair)))
+;; (add-hook js-mode-hook
+;;             (lambda ()
+;;             (define-key js-mode-map "(" 'electric-pair)
+;;             (define-key js-mode-map "[" 'electric-pair)
+;;             (define-key js-mode-map "{" 'electric-pair)))
+;; #+end_src
+** Eshell or Terminals
+https://www.reddit.com/r/emacs/comments/b6n3t8/what_would_it_take_to_get_terminal_colors_in/
+#+begin_src elisp
+(add-hook 'eshell-mode-hook
+          (lambda ()
+            (setenv "TERM" "xterm-256color")))
+(add-hook 'eshell-before-prompt-hook (setq xterm-color-preserve-properties t))
+(add-to-list 'eshell-preoutput-filter-functions 'xterm-color-filter)
+(setq eshell-output-filter-functions
+     (remove 'eshell-handle-ansi-color eshell-output-filter-functions))
 #+end_src
