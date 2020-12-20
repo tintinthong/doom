@@ -13,7 +13,7 @@
 ;;
 ;; They all accept either a font-spec, font string ("Input Mono-12"), or xlfd
 ;; font string. You generally only need these two:
-(setq doom-font (font-spec :family "Source Code Pro" :size 12 :weight 'semi-light)
+(setq doom-font (font-spec :family "Source Code Pro" :size 13 :weight 'semi-light)
       ;; doom-variable-pitch-font (font-spec :family "sans" :size 13)
       )
 
@@ -29,7 +29,21 @@
 (setq org-directory "~/org/")
 (setq org-roam-directory "~/org/roam/")
 
-(setq projectile-project-search-path '("~/Documents/GitHub/"))
+(defmacro with-system (type &rest body)
+  "Evaluate BODY if `system-type' equals TYPE."
+  (declare (indent defun))
+  `(when (eq system-type ',type)
+     ,@body))
+
+(with-system gnu/linux
+  (message "You are free!")
+  (setq projectile-project-search-path '("~/Repos/"))
+  )
+
+(with-system darwin
+  (message "You are not free! But I guess you must be rich")
+  (setq projectile-project-search-path '("~/Documents/GitHub/"))
+  )
 
 (use-package dired
   :commands (dired dired-jump)
