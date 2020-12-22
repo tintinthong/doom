@@ -372,6 +372,10 @@ https://www.emacswiki.org/emacs/PrettySymbolsForLanguages
 This definitely overridded some keys. But I defo dont use anything in insert mode. Also you can definitely do a better job with the mapping maybe load with one function only.
 
 #+begin_src eslip
+(define-key org-mode-map (kbd "M-h") nil)
+(define-key org-mode-map (kbd "M-j") nil)
+(define-key org-mode-map (kbd "M-k") nil)
+(define-key org-mode-map (kbd "M-l") nil)
 (define-key evil-insert-state-map (kbd "M-q") (kbd "1"))
 (define-key evil-insert-state-map (kbd "M-w") (kbd "2"))
 (define-key evil-insert-state-map (kbd "M-e") (kbd "3"))
@@ -389,9 +393,9 @@ This definitely overridded some keys. But I defo dont use anything in insert mod
 (define-key evil-insert-state-map (kbd "M-d") (kbd "#"))
 (define-key evil-insert-state-map (kbd "M-f") (kbd "$"))
 (define-key evil-insert-state-map (kbd "M-g") (kbd "%"))
-(define-key evil-insert-state-map (kbd "M-S-h") (kbd "^"))
-(define-key evil-insert-state-map (kbd "M-S-j") (kbd "&"))
-(define-key evil-insert-state-map (kbd "M-S-k") (kbd "*"))
-(define-key evil-insert-state-map (kbd "M-S-l") (kbd "("))
-(define-key evil-insert-state-map (kbd "M-S-;") (kbd ")"))
+(define-key evil-insert-state-map (kbd "M-h") (kbd "^"))
+(define-key evil-insert-state-map (kbd "M-j") (kbd "&"))
+(define-key evil-insert-state-map (kbd "M-k") (kbd "*"))
+(define-key evil-insert-state-map (kbd "M-l") (kbd "("))
+(define-key evil-insert-state-map (kbd "M-;") (kbd ")"))
 #+end_src
