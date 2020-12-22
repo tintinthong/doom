@@ -61,3 +61,4 @@
 (package! tiny)
 (package! key-chord)
 (package! xterm-color)
+(package! free-keys)
