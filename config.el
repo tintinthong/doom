@@ -179,10 +179,8 @@
 (key-chord-mode 1)
 (key-chord-define-global "jk" 'evil-normal-state)
 
-(define-key org-mode-map (kbd "M-h") nil)
-(define-key org-mode-map (kbd "M-j") nil)
-(define-key org-mode-map (kbd "M-k") nil)
-(define-key org-mode-map (kbd "M-l") nil)
+(evil-define-key 'insert evil-org-mode-map
+  (kbd "M h") (kbd "^"))
 (define-key evil-insert-state-map (kbd "M-q") (kbd "1"))
 (define-key evil-insert-state-map (kbd "M-w") (kbd "2"))
 (define-key evil-insert-state-map (kbd "M-e") (kbd "3"))
@@ -205,3 +203,6 @@
 (define-key evil-insert-state-map (kbd "M-k") (kbd "*"))
 (define-key evil-insert-state-map (kbd "M-l") (kbd "("))
 (define-key evil-insert-state-map (kbd "M-;") (kbd ")"))
+(define-key evil-insert-state-map (kbd "M-;") (kbd ")"))
+(define-key evil-normal-state-map (kbd "M-f") 'evil-end-of-line)
+(define-key evil-normal-state-map (kbd "M-;") 'evil-digit-argument-or-evil-beginning-of-line)
