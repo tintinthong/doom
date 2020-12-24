@@ -395,6 +395,8 @@ This definitely overridded some keys. But I defo dont use anything in insert mod
 (define-key key-translation-map (kbd "M-m") (kbd "="))
 (define-key key-translation-map (kbd "M-c") (kbd "["))
 (define-key key-translation-map (kbd "M-v") (kbd "]"))
+
+(define-key key-translation-map (kbd "M-z") (kbd "z"))
 #+end_src
 
 ** Key chording for normal mode
