@@ -223,6 +223,7 @@ Make sure you follow instruction [[github:org-roam/org-roam-server][org-roam-ser
         org-roam-server-network-label-wrap-length 20))
 #+end_src
 
+
 ** Lessons in Keybindings
 
 #+begin_src elisp
@@ -243,12 +244,6 @@ Make sure you follow instruction [[github:org-roam/org-roam-server][org-roam-ser
 
 This helps us build linear ranges
 
-** Key chording for normal mode
-Just trying it out ppl say its good
-#+begin_src elisp
-(key-chord-mode 1)
-(key-chord-define-global "jk" 'evil-normal-state)
-#+end_src
 
 ** Electric Pairing for parentheses
 Fix this later
@@ -371,34 +366,39 @@ https://www.emacswiki.org/emacs/PrettySymbolsForLanguages
 ** Define Number mode
 This definitely overridded some keys. But I defo dont use anything in insert mode. Also you can definitely do a better job with the mapping maybe load with one function only.
 
-#+begin_src eslip
-(evil-define-key 'insert evil-org-mode-map
-  (kbd "M h") (kbd "^"))
-(define-key evil-insert-state-map (kbd "M-q") (kbd "1"))
-(define-key evil-insert-state-map (kbd "M-w") (kbd "2"))
-(define-key evil-insert-state-map (kbd "M-e") (kbd "3"))
-(define-key evil-insert-state-map (kbd "M-r") (kbd "4"))
-(define-key evil-insert-state-map (kbd "M-t") (kbd "5"))
-(define-key evil-insert-state-map (kbd "M-y") (kbd "6"))
-(define-key evil-insert-state-map (kbd "M-u") (kbd "7"))
-(define-key evil-insert-state-map (kbd "M-i") (kbd "8"))
-(define-key evil-insert-state-map (kbd "M-o") (kbd "9"))
-(define-key evil-insert-state-map (kbd "M-p") (kbd "0"))
-(define-key evil-insert-state-map (kbd "M-[") (kbd "-"))
-(define-key evil-insert-state-map (kbd "M-]") (kbd "="))
-(define-key evil-insert-state-map (kbd "M-a") (kbd "!"))
-(define-key evil-insert-state-map (kbd "M-s") (kbd "@"))
-(define-key evil-insert-state-map (kbd "M-d") (kbd "#"))
-(define-key evil-insert-state-map (kbd "M-f") (kbd "$"))
-(define-key evil-insert-state-map (kbd "M-g") (kbd "%"))
-(define-key evil-insert-state-map (kbd "M-h") (kbd "^"))
-(define-key evil-insert-state-map (kbd "M-j") (kbd "&"))
-(define-key evil-insert-state-map (kbd "M-k") (kbd "*"))
-(define-key evil-insert-state-map (kbd "M-l") (kbd "("))
-(define-key evil-insert-state-map (kbd "M-;") (kbd ")"))
-(define-key evil-insert-state-map (kbd "M-;") (kbd ")"))
-(define-key evil-normal-state-map (kbd "M-f") 'evil-end-of-line)
-(define-key evil-normal-state-map (kbd "M-;") 'evil-digit-argument-or-evil-beginning-of-line)
+#+begin_src elisp
+(define-key key-translation-map (kbd "C-h") (kbd "DEL"))
+
+(define-key key-translation-map (kbd "M-q") (kbd "1"))
+(define-key key-translation-map (kbd "M-w") (kbd "2"))
+(define-key key-translation-map (kbd "M-e") (kbd "3"))
+(define-key key-translation-map (kbd "M-r") (kbd "4"))
+(define-key key-translation-map (kbd "M-t") (kbd "5"))
+(define-key key-translation-map (kbd "M-y") (kbd "6"))
+(define-key key-translation-map (kbd "M-u") (kbd "7"))
+(define-key key-translation-map (kbd "M-i") (kbd "8"))
+(define-key key-translation-map (kbd "M-o") (kbd "9"))
+(define-key key-translation-map (kbd "M-p") (kbd "0"))
+
+(define-key key-translation-map (kbd "M-a") (kbd "!"))
+(define-key key-translation-map (kbd "M-s") (kbd "@"))
+(define-key key-translation-map (kbd "M-d") (kbd "#"))
+(define-key key-translation-map (kbd "M-f") (kbd "$"))
+(define-key key-translation-map (kbd "M-g") (kbd "%"))
+(define-key key-translation-map (kbd "M-h") (kbd "^"))
+(define-key key-translation-map (kbd "M-j") (kbd "&"))
+(define-key key-translation-map (kbd "M-k") (kbd "*"))
+(define-key key-translation-map (kbd "M-l") (kbd "("))
+(define-key key-translation-map (kbd "M-;") (kbd ")"))
+
+(define-key key-translation-map (kbd "M-n") (kbd "-"))
+(define-key key-translation-map (kbd "M-m") (kbd "="))
+(define-key key-translation-map (kbd "M-c") (kbd "["))
+(define-key key-translation-map (kbd "M-v") (kbd "]"))
 #+end_src
 
-must also settle for org mode
+** Key chording for normal mode
+Just trying it out ppl say its good
+#+begin_src elisp
+(key-chord-mode 1)
+#+end_src
