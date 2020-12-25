@@ -204,8 +204,10 @@
 (define-key key-translation-map (kbd "M-m") (kbd "="))
 (define-key key-translation-map (kbd "M-c") (kbd "["))
 (define-key key-translation-map (kbd "M-v") (kbd "]"))
+(define-key key-translation-map (kbd "M-C") (kbd "{"))
+(define-key key-translation-map (kbd "M-V") (kbd "}"))
 
-(define-key key-translation-map (kbd "M-z") (kbd "`"))
+(Define-key key-translation-map (kbd "M-z") (kbd "`"))
 
 (key-chord-mode 1)
 
