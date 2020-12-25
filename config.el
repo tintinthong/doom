@@ -207,7 +207,8 @@
 (define-key key-translation-map (kbd "M-C") (kbd "{"))
 (define-key key-translation-map (kbd "M-V") (kbd "}"))
 
-(Define-key key-translation-map (kbd "M-z") (kbd "`"))
+(define-key key-translation-map (kbd "M-z") (kbd "`"))
+(setq ns-right-alternate-modifier 'left) ;; really set right alt key to not use graphical symbols
 
 (key-chord-mode 1)
 
