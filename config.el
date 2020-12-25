@@ -210,6 +210,10 @@
 (define-key key-translation-map (kbd "M-z") (kbd "`"))
 (setq ns-right-alternate-modifier 'left) ;; really set right alt key to not use graphical symbols
 
+(define-key key-translation-map (kbd "M-/") (kbd "\"))
+(define-key key-translation-map (kbd "M-\/") (kbd "\\"))
+(define-key key-translation-map (kbd "M-\?") (kbd "\|"))
+
 (key-chord-mode 1)
 
 (with-system gnu/linux
