@@ -396,11 +396,19 @@ This definitely overridded some keys. But I defo dont use anything in insert mod
 (define-key key-translation-map (kbd "M-c") (kbd "["))
 (define-key key-translation-map (kbd "M-v") (kbd "]"))
 
-(define-key key-translation-map (kbd "M-z") (kbd "z"))
+(define-key key-translation-map (kbd "M-z") (kbd "`"))
 #+end_src
 
 ** Key chording for normal mode
 Just trying it out ppl say its good
 #+begin_src elisp
 (key-chord-mode 1)
+#+end_src
+
+** EXWM
+#+begin_src elisp
+(with-system gnu/linux
+ (require 'exwm-config)
+ (exwm-config-default)
+  )
 #+end_src

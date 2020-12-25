@@ -205,6 +205,11 @@
 (define-key key-translation-map (kbd "M-c") (kbd "["))
 (define-key key-translation-map (kbd "M-v") (kbd "]"))
 
-(define-key key-translation-map (kbd "M-<tab>") (kbd "`"))
+(define-key key-translation-map (kbd "M-z") (kbd "`"))
 
 (key-chord-mode 1)
+
+(with-system gnu/linux
+ (require 'exwm-config)
+ (exwm-config-default)
+  )
