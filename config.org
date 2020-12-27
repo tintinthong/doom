@@ -415,8 +415,8 @@ Just trying it out ppl say its good
 
 ** EXWM
 #+begin_src elisp
-(with-system gnu/linux
- (require 'exwm-config)
- (exwm-config-default)
-  )
+;; (with-system gnu/linux
+;;  (require 'exwm-config)
+;;  (exwm-config-default)
+;;   )
 #+end_src
