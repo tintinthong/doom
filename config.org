@@ -366,7 +366,7 @@ https://www.emacswiki.org/emacs/PrettySymbolsForLanguages
 ** Define Number mode
 This definitely overridded some keys. But I defo dont use anything in insert mode. Also you can definitely do a better job with the mapping maybe load with one function only.
 #+begin_src elisp
-(define-key key-translation-map (kbd "C-h") (kbd "DEL")) ;; necessary
+;; (define-key key-translation-map (kbd "C-h") (kbd "DEL"))
 ;; (define-key key-translation-map (kbd "M-q") (kbd "1"))
 ;; (define-key key-translation-map (kbd "M-w") (kbd "2"))
 ;; (define-key key-translation-map (kbd "M-e") (kbd "3"))
