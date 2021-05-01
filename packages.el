@@ -63,3 +63,4 @@
 (package! xterm-color)
 (package! free-keys)
 (package! exwm)
+(package! python-black)

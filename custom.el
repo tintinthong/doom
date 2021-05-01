@@ -49,3 +49,4 @@
  '(hl-line ((t (:foreground nil))))
  '(solaire-hl-line-face ((t (:foreground nil)))))
 (put 'customize-group 'disabled nil)
+(put 'projectile-ripgrep 'disabled nil)
