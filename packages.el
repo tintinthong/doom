@@ -64,3 +64,5 @@
 (package! free-keys)
 (package! exwm)
 (package! python-black)
+(package! py-isort)
+(package! org-pomodoro)
