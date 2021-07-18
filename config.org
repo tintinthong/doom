@@ -28,6 +28,9 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
+(add-to-list 'load-path "~/.emacs.d/modus-themes") ;; I downloaded the source in ~/.emacs.d
+
+(require 'modus-themes)
 (setq doom-theme 'modus-vivendi)
 ;; Remove default hover highlight that removes ability to see syntax highlighting
 ;; (custom-set-faces! '((hl-line solaire-hl-line-face) :foreground nil))
@@ -440,24 +443,7 @@ Please add this to dired at-point
   (interactive)
   (shell-command)
         )
-;; R -e "shiny::runApp('~/shinyapp')"
-
-;; (defun shiny ()
-;;   "run shiny R application in new shell buffer
-
-;;   if there is displayed buffer that have shell it will use that window"
-;;   (interactive)
-;;   (let* ((R (concat "shiny::runApp('" default-directory "')"))
-;;          (name "*shiny*")
-;;          (new-buffer (get-buffer-create name))
-;;          (script-proc-buffer
-;;           (apply 'make-comint-in-buffer "script" new-buffer "R" nil `("-e" ,R)))
-;;          (window (get-window-with-mode '(comint-mode eshell-mode)))
-;;        (script-proc (get-buffer-process script-proc-buffer)))
-;;     (if window
-;;         (set-window-buffer window new-buffer)
-;;       (switch-to-buffer-other-window new-buffer))))
-; inserting pipe operator
+;; inserting pipe operator
 (defun japhir/insert-r-pipe ()
   "Insert the pipe operator in R, %>%"
   (interactive)

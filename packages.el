@@ -57,7 +57,6 @@
 (package! spotify)
 (package! org-roam-server)
 (package! typing)
-(package! modus-vivendi-theme)
 (package! tiny)
 (package! key-chord)
 (package! xterm-color)
