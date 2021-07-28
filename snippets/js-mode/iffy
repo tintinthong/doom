@@ -1,0 +1,6 @@
+# key: iffy
+# name: iffy
+# --
+(function async($1) {
+  `%`$0
+});
