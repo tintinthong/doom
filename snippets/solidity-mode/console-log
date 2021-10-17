@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# condition: t
+# --
+
+console.log("%s", $1);

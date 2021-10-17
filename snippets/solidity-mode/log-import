@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# uuid:
+# condition: t
+# --
+
+import "hardhat/console.sol";

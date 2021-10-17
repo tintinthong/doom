@@ -18,9 +18,9 @@
 ;;
 ;; They all accept either a font-spec, font string ("Input Mono-12"), or xlfd
 ;; font string. You generally only need these two:
-(setq doom-font (font-spec :family "Source Code Pro" :size 13 :weight 'semi-light)
-      ;; doom-variable-pitch-font (font-spec :family "sans" :size 13)
-      )
+;; (setq doom-font (font-spec :family "Source Code Pro" :size 13 :weight 'semi-light)
+;;       ;; doom-variable-pitch-font (font-spec :family "sans" :size 13)
+;;       )
 #+end_src
 
 ** Theme
@@ -28,8 +28,6 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(add-to-list 'load-path "~/.emacs.d/modus-themes") ;; I downloaded the source in ~/.emacs.d
-
 (require 'modus-themes)
 (setq doom-theme 'modus-vivendi)
 ;; Remove default hover highlight that removes ability to see syntax highlighting
@@ -77,10 +75,11 @@ This keybinding is already taken by`SPC o -`
   )
 #+end_src
 
-** Vim
+** Evil
 #+begin_src elisp
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'
+(setq global-display-line-numbers-mode 't) ;;sets display evil relative globally
 (setq display-line-numbers-type 'relative)
 #+end_src
 
@@ -518,4 +517,41 @@ shell exits, the buffer is killed."
 (add-hook! 'python-mode-hook #'python-black-on-save-mode)
 (require 'py-isort)
 (add-hook! 'before-save-hook #'py-isort-before-save)
+#+end_src
+
+** Yas Snippets
+#+begin_src elisp
+(setq yas-snippet-dirs (append yas-snippet-dirs
+                               '("~/.doom.d/snippets")))
+#+end_src
+
+** Request Mode
+#+begin_src elisp
+;; Ctrl+d in vterm to quit
+(require 'request)
+(setq request-backend 'url-retrieve)
+(request "http://httpbin.org/get"
+  :params '(("key" . "value") ("key2" . "value2"))
+  :parser 'json-read
+  :success (cl-function
+            (lambda (&key data &allow-other-keys)
+              (message "I sent: %S" (assoc-default 'args data)))))
+#+end_src
+
+** Ledger Mode
+#+begin_src elisp
+;; Ctrl+d in vterm to quit
+(setq ledger-master-file "~/org/ledger/main.ledger")
+(setq ledger-default-date-format "%d/%m/%Y")
+#+end_src
+** Magit
+
+#+begin_src elisp
+(setq magit-disable-line-numbers nil)
+#+end_src
+
+** Dap
+
+#+begin_src elisp
+(require 'dap-node)
 #+end_src

@@ -65,3 +65,7 @@
 (package! python-black)
 (package! py-isort)
 (package! org-pomodoro)
+(package! modus-themes)
+(package! ledger-mode)
+(package! request)
+(package! dap-mode)
