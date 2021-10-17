@@ -38,8 +38,8 @@
 #+begin_src elisp
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
-(setq org-directory "~/org/")
-(setq org-roam-directory "~/org/roam/")
+(setq org-directory "~/GitHub/org/") ;; original computer is in home dir
+(setq org-roam-directory "~/Documents/GitHub/org/roam/") ;; original computer is in home dir
 #+end_src
 
 ** Projectile Mode
