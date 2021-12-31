@@ -70,6 +70,7 @@
 (package! dap-mode)
 (package! forge)
 (package! git-link)
+(package! multi-vterm)
 
 (package! gitconfig-mode
 	  :recipe (:host github :repo "magit/git-modes"
