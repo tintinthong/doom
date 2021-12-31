@@ -526,7 +526,6 @@ shell exits, the buffer is killed."
 (setq magit-section-disable-line-numbers nil)
 (with-eval-after-load 'magit
   (require 'forge))
-(ghub-request "GET" "/user")
 (setq auth-sources '("~/.authinfo")) ;plaintext TODO: use gpg
 #+end_src
 
