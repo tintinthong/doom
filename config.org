@@ -87,6 +87,7 @@ I don't think require is needed because packages.el loads the packages already
 #+begin_src elisp
 (require 'prettier-js)
 (add-hook 'js2-mode-hook 'prettier-js-mode)
+(add-hook 'typescript-mode-hook 'prettier-js-mode)
 (map! :leader
       :desc "Prettify" "m f" #'prettier-js
       )
@@ -486,12 +487,12 @@ shell exits, the buffer is killed."
 
 ** Python
 #+begin_src elisp
-(use-package! python-black
-  :demand t
-  :after python)
-(add-hook! 'python-mode-hook #'python-black-on-save-mode)
-(require 'py-isort)
-(add-hook! 'before-save-hook #'py-isort-before-save)
+;; (use-package! python-black
+;;   :demand t
+;;   :after python)
+;; (add-hook! 'python-mode-hook #'python-black-on-save-mode)
+;; (require 'py-isort)
+;; (add-hook! 'before-save-hook #'py-isort-before-save)
 #+end_src
 
 ** Yas Snippets
@@ -523,6 +524,10 @@ shell exits, the buffer is killed."
 
 #+begin_src elisp
 (setq magit-section-disable-line-numbers nil)
+(with-eval-after-load 'magit
+  (require 'forge))
+(ghub-request "GET" "/user")
+(setq auth-sources '("~/.authinfo")) ;plaintext TODO: use gpg
 #+end_src
 
 ** Dap
