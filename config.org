@@ -526,7 +526,7 @@ shell exits, the buffer is killed."
 (setq magit-section-disable-line-numbers nil)
 (with-eval-after-load 'magit
   (require 'forge))
-(setq auth-sources '("~/.authinfo")) ;plaintext TODO: use gpg
+(setq auth-sources '("~/.authinfo")) ;plaintext password TODO: use gpg
 #+end_src
 
 ** Dap
@@ -534,3 +534,7 @@ shell exits, the buffer is killed."
 #+begin_src elisp
 (require 'dap-node)
 #+end_src
+
+** Workspaces
+
+[[~/.emacs.d/.local/etc/workspaces/_workspaces][Saved workspace file]]
