@@ -1,0 +1,15 @@
+# -*- mode: snippet -*-
+# name: pr-feature
+# --
+
+# $1
+
+This pr adds the functionality to $2
+
+This pr is related to:
+- [pr]()
+- [issue]()
+
+## Demo
+
+You can view demo [here]()
