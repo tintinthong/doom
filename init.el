@@ -91,7 +91,7 @@
        ;;editorconfig      ; let someone else argue about tabs vs spaces
        ;;ein               ; tame Jupyter notebooks with emacs
        (eval +overlay)     ; run code, run (also, repls)
-       ;;gist              ; interacting with github gists
+       gist              ; interacting with github gists
        lookup              ; navigate your code and its documentation
        lsp
        magit             ; a git porcelain for Emacs
@@ -174,9 +174,9 @@
        ;;(wanderlust +gmail)
 
        :app
-       ;;calendar
+       calendar
        irc               ; how neckbeards socialize
-       ;;(rss +org)        ; emacs as an RSS reader
+       ;; (rss +org)        ; emacs as an RSS reader
        twitter           ; twitter client https://twitter.com/vnought
 
        :config
