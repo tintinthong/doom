@@ -1,0 +1,16 @@
+# -*- mode: snippet -*-
+# name: pr-bug
+# --
+
+# $1
+
+This pr fixes the bug $2
+
+This pr is related to:
+- [pr]()
+- [issue]()
+
+
+## Demo
+
+You can view demo [here]()
