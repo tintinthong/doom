@@ -71,6 +71,7 @@
 (package! forge)
 (package! git-link)
 (package! multi-vterm)
+(package! conda)
 
 (package! gitconfig-mode
 	  :recipe (:host github :repo "magit/git-modes"
