@@ -538,3 +538,23 @@ shell exits, the buffer is killed."
 ** Workspaces
 
 [[~/.emacs.d/.local/etc/workspaces/_workspaces][Saved workspace file]]
+
+** Env
+
+*** Open zshrc and zprofile
+#+begin_src elisp
+(defun open-zshrc ()
+  (interactive)
+  (find-file "~/.zshrc")
+  )
+(defun open-zprofile ()
+  (interactive)
+  (find-file "~/.zprofile")
+  )
+(map! :leader
+      (:prefix-map ("o" . "open")
+       (:prefix ("e" . "env")
+        :desc "zshrc" "s" #'open-zshrc
+        :desc "zprofile" "p" #'open-zprofile
+        )))
+#+end_src
