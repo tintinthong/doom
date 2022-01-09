@@ -487,12 +487,9 @@ shell exits, the buffer is killed."
 
 ** Python
 #+begin_src elisp
-;; (use-package! python-black
-;;   :demand t
-;;   :after python)
-;; (add-hook! 'python-mode-hook #'python-black-on-save-mode)
-;; (require 'py-isort)
-;; (add-hook! 'before-save-hook #'py-isort-before-save)
+(add-hook! 'python-mode-hook #'python-black-on-save-mode)
+(require 'py-isort)
+(add-hook! 'before-save-hook #'py-isort-before-save)
 #+end_src
 
 ** Yas Snippets
@@ -557,4 +554,14 @@ shell exits, the buffer is killed."
         :desc "zshrc" "s" #'open-zshrc
         :desc "zprofile" "p" #'open-zprofile
         )))
+#+end_src
+
+** Forge
+
+*** Add (default) snippet with pr
+
+#+begin_src elisp
+;; (defun something () (lambda () (message 'hi')))
+;; (add-hook 'gfm-mode 'something)
+;; (add-hook 'lisp-interaction-mode-hook 'forge-post-mode)
 #+end_src
