@@ -555,13 +555,3 @@ shell exits, the buffer is killed."
         :desc "zprofile" "p" #'open-zprofile
         )))
 #+end_src
-
-** Forge
-
-*** Add (default) snippet with pr
-
-#+begin_src elisp
-;; (defun something () (lambda () (message 'hi')))
-;; (add-hook 'gfm-mode 'something)
-;; (add-hook 'lisp-interaction-mode-hook 'forge-post-mode)
-#+end_src
