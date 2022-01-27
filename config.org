@@ -54,9 +54,16 @@
   (setq projectile-project-search-path '("~/Repos/"))
   )
 
+
 (with-system darwin
   (message "You are not free! But I guess you must be rich")
   (setq projectile-project-search-path '("~/Documents/GitHub/"))
+  (setq cardstack-monorepo-path "~/Documents/Github/cardstack")
+    ;; https://stackoverflow.com/questions/17164767/emacs-lisp-concise-way-to-get-directory-files-without-and
+  (setq cardpay-subpackages (directory-files (expand-file-name (concat cardstack-monorepo-path "/packages")) nil "^\\([^.]\\|\\.[^.]\\|\\.\\..\\)"))
+  (mapcar (lambda (arg) (concat "~/Documents/GitHub/cardstack/" arg)) cardpay-subpackages)
+
+  (projectile-add-known-project)
   )
 #+end_src
 
