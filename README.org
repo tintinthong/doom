@@ -4,12 +4,10 @@
 
 * Setting up doom emacs
 
-** Install [[github:d12frosted/homebrew-emacs-plus#start-of-content][Emacs Plus]]
+** Install Emacs
 
 #+begin_src bash
-brew tap d12frosted/emacs-plus
-brew install emacs-plus@27
-brew install emacs latest emacs-plus@27
+brew install emacs
 #+end_src
 
 ** Install [[doom-repo:][Doom Emacs]]
