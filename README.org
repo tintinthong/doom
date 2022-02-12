@@ -7,11 +7,14 @@
 #+begin_src bash
 # install emacs
 brew install emacs
+
 # install doom emacs
 git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d 
 ~/.emacs.d/bin/doom install
+
 # export doom to path
 export PATH="$HOME/.emacs.d/bin:$PATH"
+
 # build emacs
 doom sync
 #+end_src
