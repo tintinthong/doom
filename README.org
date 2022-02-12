@@ -20,10 +20,6 @@ Also, add doom emacs to path in `~/.zshrc`
 export PATH="$HOME/.emacs.d/bin:$PATH"
 #+end_src
 
-#+begin_src bash
-doom sync
-#+end_src
-
 ** Clone [[github:tintinthong/doom][@tintinthong Personal Doom Config]]
 
 #+begin_src bash
