@@ -2,8 +2,6 @@
 #+DATE:  May 1, 2021
 #+AUTHOR: tintinthong
 
-* Setting up doom emacs
-
 ** Install Emacs
 
 #+begin_src bash
