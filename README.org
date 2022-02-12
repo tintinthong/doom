@@ -2,22 +2,18 @@
 #+DATE:  May 1, 2021
 #+AUTHOR: tintinthong
 
-** Install Emacs
+** Prepare doom emacs 
 
 #+begin_src bash
+# install emacs
 brew install emacs
-#+end_src
-
-** Install [[doom-repo:][Doom Emacs]]
-
-#+begin_src bash
-git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d
+# install doom emacs
+git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d 
 ~/.emacs.d/bin/doom install
-#+end_src
-
-Also, add doom emacs to path in `~/.zshrc`
-#+begin_src bash
+# export doom to path
 export PATH="$HOME/.emacs.d/bin:$PATH"
+# build emacs
+doom sync
 #+end_src
 
 ** Clone [[github:tintinthong/doom][@tintinthong Personal Doom Config]]
