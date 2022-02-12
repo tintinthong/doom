@@ -29,10 +29,9 @@ doom sync
 
 ** Clone [[github:tintinthong/org][@tintinthong Org Folder]]
 
-This only applies to @tintinthong. If you are not @tintinthong, you may have to manually create ~$HOME/org~ and ~$HOME/org/roam/~.
+This only applies to @tintinthong. If you are not @tintinthong, you may have to manually create ~$HOME/org~.
 
 #+begin_src bash
 git clone git@github.com:tintinthong/org.git
 #+end_src
 
-** TODO Setup [[github:plexus/chemacs2][Chemacs 2]]
